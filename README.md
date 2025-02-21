@@ -84,7 +84,7 @@ Or:
     ```bash
    make install
     ```
-    this install it in ~/bin
+    this puts the programm in `~/bin`
 2. Run the application from anywhere, if you have `~/bin` in your PATH
     ```bash
    ssh-choose
