@@ -102,8 +102,9 @@ void display_menu() {
     int highlight = 0;
     int choice = 0;
     int ch;
+    int exit_menu = 0;
 
-    while (1) {
+    while (exit_menu == 0) {
         clear();
         mvprintw(0, 0, "Select an SSH key to add:");
         for (int i = 0; i < key_count; i++) {
@@ -123,14 +124,14 @@ void display_menu() {
                 break;
             case '\n':  // Enter key
                 choice = highlight;
-                goto exit_menu;
+                exit_menu = 1;
+                break;
             case 'q':
                 endwin();
                 exit(0);
         }
     }
 
-exit_menu:
     endwin();
 
     // Run ssh-add on the selected key
