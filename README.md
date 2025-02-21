@@ -78,3 +78,14 @@ pkg-config --modversion ncurses
    ```bash
    ./ssh-choose
    ```
+
+Or:
+1. Install via make:
+    ```bash
+   make install
+    ```
+    this install it in ~/bin
+2. Run the application from anywhere, if you have `~/bin` in your PATH
+    ```bash
+   ssh-choose
+    ```
